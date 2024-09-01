@@ -14,7 +14,7 @@ const KnittingDataUpload = () => {
 
     try {
       const response = await axios.post(
-        "http://10.12.60.80:3000/uploadQASummary",
+        "http://10.12.3.182:3007/uploadQASummary",
         formData,
         {
           headers: {
@@ -25,7 +25,7 @@ const KnittingDataUpload = () => {
       alert(response.data);
     } catch (error) {
       console.error("Error uploading the file:", error);
-      alert("Error uploading the file.");
+      alert("Error uploading the file:", error);
     }
   };
 
@@ -35,7 +35,7 @@ const KnittingDataUpload = () => {
 
     try {
       const response = await axios.get(
-        "http://10.12.60.80:3000/export_qa_summary",
+        "http://10.12.3.182:3007/export_qa_summary",
         formData,
         {
           headers: {
@@ -46,7 +46,7 @@ const KnittingDataUpload = () => {
       alert(response.data);
     } catch (error) {
       console.error("Error uploading the file:", error);
-      alert("Error uploading the file.");
+      alert("Error uploading the file:", error);
     }
   };
 
@@ -56,7 +56,7 @@ const KnittingDataUpload = () => {
 
     try {
       const response = await axios.post(
-        "http://10.12.60.80:3000/uploadSMV",
+        "http://10.12.3.182:3007/uploadSMV",
         formData,
         {
           headers: {
@@ -67,7 +67,7 @@ const KnittingDataUpload = () => {
       alert(response.data);
     } catch (error) {
       console.error("Error uploading the file:", error);
-      alert("Error uploading the file.");
+      alert("Error uploading the file:", error);
     }
   };
 
@@ -77,7 +77,7 @@ const KnittingDataUpload = () => {
 
     try {
       const response = await axios.get(
-        "http://10.12.60.80:3000/export_smv",
+        "http://10.12.3.182:3007/export_smv",
         formData,
         {
           headers: {
@@ -88,7 +88,49 @@ const KnittingDataUpload = () => {
       alert(response.data);
     } catch (error) {
       console.error("Error uploading the file:", error);
-      alert("Error uploading the file.");
+      alert("Error uploading the file:", error);
+    }
+  };
+
+  const handleUploadAttedance = async () => {
+    const formData = new FormData();
+    formData.append("file", file);
+
+    try {
+      const response = await axios.post(
+        "http://10.12.3.182:3007/uploadAttendanceKnitting",
+        formData,
+        {
+          headers: {
+            "Content-Type": "multipart/form-data",
+          },
+        }
+      );
+      alert(response.data);
+    } catch (error) {
+      console.error("Error uploading the file:", error);
+      alert("Error uploading the file:", error);
+    }
+  };
+
+  const handleUploadToDatabaseAttendance = async () => {
+    const formData = new FormData();
+    formData.append("file", file);
+
+    try {
+      const response = await axios.get(
+        "http://10.12.3.182:3007/export_attendance_knitting",
+        formData,
+        {
+          headers: {
+            "Content-Type": "multipart/form-data",
+          },
+        }
+      );
+      alert(response.data);
+    } catch (error) {
+      console.error("Error uploading the file:", error);
+      alert("Error uploading the file:", error);
     }
   };
 
@@ -108,6 +150,14 @@ const KnittingDataUpload = () => {
         <button onClick={handleUploadSMV}>Upload</button>
         <button onClick={handleUploadToDatabaseSMV}>
           Upload to Database (SMV)
+        </button>
+      </div>
+      <div>
+        <h2>Upload Attendance Excel File</h2>
+        <input type="file" accept=".xlsx, .xls" onChange={handleFileChange} />
+        <button onClick={handleUploadAttedance}>Upload</button>
+        <button onClick={handleUploadToDatabaseAttendance}>
+          Upload to Database (Attendance)
         </button>
       </div>
     </div>
