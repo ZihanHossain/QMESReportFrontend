@@ -155,6 +155,88 @@ function Reports() {
             </CardActionArea>
           </Card>
         </Link>
+        <Link
+          to="http://administrator:masterpass@10.12.3.182/ReportServer/Pages/ReportViewer.aspx?%2fQMES+Celcius+1%2fAQL&rs:Command=Render"
+          className="card"
+        >
+          <Card sx={{ maxWidth: 345 }}>
+            <CardActionArea>
+              <CardMedia
+                component="img"
+                height="140"
+                image="https://1.bp.blogspot.com/-nzm908Pfunw/VqXgeRNp4LI/AAAAAAAACJI/wgeVntLSIT8/w1200-h630-p-k-no-nu/status-report.png"
+                alt="green iguana"
+              />
+              <CardContent>
+                <Typography gutterBottom variant="h8" component="div">
+                  AQL Report
+                </Typography>
+              </CardContent>
+            </CardActionArea>
+          </Card>
+        </Link>
+      </div>
+      <div className="row">
+        <Link
+          to="http://administrator:masterpass@10.12.3.182/ReportServer/Pages/ReportViewer.aspx?%2fQMES+Celcius+1%2fDetails+QMES+Report+(Celsius+1)&rs:Command=Render"
+          className="card"
+        >
+          <Card sx={{ maxWidth: 345 }}>
+            <CardActionArea>
+              <CardMedia
+                component="img"
+                height="140"
+                image="https://1.bp.blogspot.com/-nzm908Pfunw/VqXgeRNp4LI/AAAAAAAACJI/wgeVntLSIT8/w1200-h630-p-k-no-nu/status-report.png"
+                alt="green iguana"
+              />
+              <CardContent>
+                <Typography gutterBottom variant="h8" component="div">
+                  Details QMES Report (Celsius 1)
+                </Typography>
+              </CardContent>
+            </CardActionArea>
+          </Card>
+        </Link>
+        <Link
+          to="http://administrator:masterpass@10.12.3.182/ReportServer/Pages/ReportViewer.aspx?%2fQMES+Celcius+1%2fKQC+Wise+Production&rs:Command=Render"
+          className="card"
+        >
+          <Card sx={{ maxWidth: 345 }}>
+            <CardActionArea>
+              <CardMedia
+                component="img"
+                height="140"
+                image="https://1.bp.blogspot.com/-nzm908Pfunw/VqXgeRNp4LI/AAAAAAAACJI/wgeVntLSIT8/w1200-h630-p-k-no-nu/status-report.png"
+                alt="green iguana"
+              />
+              <CardContent>
+                <Typography gutterBottom variant="h8" component="div">
+                  KQC Wise Production
+                </Typography>
+              </CardContent>
+            </CardActionArea>
+          </Card>
+        </Link>
+        <Link
+          to="http://administrator:masterpass@10.12.3.182/ReportServer/Pages/ReportViewer.aspx?%2fQMES+Celcius+1%2fKnitting+Endline+Report+(Celsius+1)&rs:Command=Render"
+          className="card"
+        >
+          <Card sx={{ maxWidth: 345 }}>
+            <CardActionArea>
+              <CardMedia
+                component="img"
+                height="140"
+                image="https://1.bp.blogspot.com/-nzm908Pfunw/VqXgeRNp4LI/AAAAAAAACJI/wgeVntLSIT8/w1200-h630-p-k-no-nu/status-report.png"
+                alt="green iguana"
+              />
+              <CardContent>
+                <Typography gutterBottom variant="h8" component="div">
+                  Knitting Endline Report (Celsius 1)
+                </Typography>
+              </CardContent>
+            </CardActionArea>
+          </Card>
+        </Link>
       </div>
     </div>
   );
