@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import "../Css/HomeScreen.css";
 
@@ -13,6 +13,9 @@ function HomeScreen() {
       </Link>
       <Link to="/linkingdataupload" className="card">
         <div className="card-content">Linking Data Upload</div>
+      </Link>
+      <Link to="/edit-report" className="card">
+        <div className="card-content">Edit Report</div>
       </Link>
     </div>
   );

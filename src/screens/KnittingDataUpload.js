@@ -14,7 +14,7 @@ const KnittingDataUpload = () => {
 
     try {
       const response = await axios.post(
-        "http://10.12.3.182:3007/uploadQASummary",
+        `http://${process.env.REACT_APP_SERVER_IP}:${process.env.REACT_APP_SERVER_PORT}/uploadQASummary`,
         formData,
         {
           headers: {
@@ -35,7 +35,7 @@ const KnittingDataUpload = () => {
 
     try {
       const response = await axios.get(
-        "http://10.12.3.182:3007/export_qa_summary",
+        `http://${process.env.REACT_APP_SERVER_IP}:${process.env.REACT_APP_SERVER_PORT}/export_qa_summary`,
         formData,
         {
           headers: {
@@ -56,7 +56,7 @@ const KnittingDataUpload = () => {
 
     try {
       const response = await axios.post(
-        "http://10.12.3.182:3007/uploadSMV",
+        `http://${process.env.REACT_APP_SERVER_IP}:${process.env.REACT_APP_SERVER_PORT}/uploadSMV`,
         formData,
         {
           headers: {
@@ -77,7 +77,7 @@ const KnittingDataUpload = () => {
 
     try {
       const response = await axios.get(
-        "http://10.12.3.182:3007/export_smv",
+        `http://${process.env.REACT_APP_SERVER_IP}:${process.env.REACT_APP_SERVER_PORT}/export_smv`,
         formData,
         {
           headers: {
@@ -98,7 +98,49 @@ const KnittingDataUpload = () => {
 
     try {
       const response = await axios.post(
-        "http://10.12.3.182:3007/uploadAttendanceKnitting",
+        `http://${process.env.REACT_APP_SERVER_IP}:${process.env.REACT_APP_SERVER_PORT}/uploadAttendanceKnitting`,
+        formData,
+        {
+          headers: {
+            "Content-Type": "multipart/form-data",
+          },
+        }
+      );
+      alert(response.data);
+    } catch (error) {
+      console.error("Error uploading the file:", error);
+      alert("Error uploading the file:", error);
+    }
+  };
+
+  const handleUploadPlannedEfficiency = async () => {
+    const formData = new FormData();
+    formData.append("file", file);
+
+    try {
+      const response = await axios.post(
+        `http://${process.env.REACT_APP_SERVER_IP}:${process.env.REACT_APP_SERVER_PORT}/uploadPlannedEfficiency`,
+        formData,
+        {
+          headers: {
+            "Content-Type": "multipart/form-data",
+          },
+        }
+      );
+      alert(response.data);
+    } catch (error) {
+      console.error("Error uploading the file:", error);
+      alert("Error uploading the file:", error);
+    }
+  };
+
+  const handleUploadToDatabasePlannedEfficiency = async () => {
+    const formData = new FormData();
+    formData.append("file", file);
+
+    try {
+      const response = await axios.get(
+        `http://${process.env.REACT_APP_SERVER_IP}:${process.env.REACT_APP_SERVER_PORT}/export_planned_efficiency`,
         formData,
         {
           headers: {
@@ -119,7 +161,7 @@ const KnittingDataUpload = () => {
 
     try {
       const response = await axios.get(
-        "http://10.12.3.182:3007/export_attendance_knitting",
+        `http://${process.env.REACT_APP_SERVER_IP}:${process.env.REACT_APP_SERVER_PORT}/export_attendance_knitting`,
         formData,
         {
           headers: {
@@ -158,6 +200,14 @@ const KnittingDataUpload = () => {
         <button onClick={handleUploadAttedance}>Upload</button>
         <button onClick={handleUploadToDatabaseAttendance}>
           Upload to Database (Attendance)
+        </button>
+      </div>
+      <div>
+        <h2>Upload Target Efficiency Excel File</h2>
+        <input type="file" accept=".xlsx, .xls" onChange={handleFileChange} />
+        <button onClick={handleUploadPlannedEfficiency}>Upload</button>
+        <button onClick={handleUploadToDatabasePlannedEfficiency}>
+          Upload to Database (Target Efficiency)
         </button>
       </div>
     </div>

@@ -1,0 +1,41 @@
+.container {
+  display: flex;
+  height: 100%;
+}
+
+.drawerButton {
+  align-self: center;
+}
+
+.rightSection {
+  width: 100%;
+}
+
+.dataBar {
+  display: flex;
+  align-self: center;
+  padding-top: 2%;
+  padding-bottom: 1%;
+}
+
+.dataBarText {
+  width: 100px;
+  align-self: center;
+  border-right: dotted blue 1px;
+}
+
+.datePicker {
+  display: flex;
+  height: 100%;
+  align-items: center;
+}
+
+.row {
+  display: flex;
+  border: solid black 1px;
+  border-radius: 5px;
+  padding-right: 1%;
+  margin-right: 1%;
+  /* width: 100%; */
+  /* justify-content: ; */
+}

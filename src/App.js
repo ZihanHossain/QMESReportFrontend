@@ -1,9 +1,10 @@
 import "./App.css";
-import { BrowserRouter, useNavigate, useRoutes } from "react-router-dom";
+import { BrowserRouter, useRoutes } from "react-router-dom";
 import Reports from "./screens/Reports";
 import KnittingDataUpload from "./screens/KnittingDataUpload";
 import LinkingDataUpload from "./screens/LinkingDataUpload";
 import HomeScreen from "./screens/HomeScreen";
+import EditReport from "./screens/EditReport";
 
 const Routes = () => {
   const routes = useRoutes([
@@ -11,6 +12,7 @@ const Routes = () => {
     { path: "/reports", element: <Reports /> },
     { path: "/knittingdataupload", element: <KnittingDataUpload /> },
     { path: "/linkingdataupload", element: <LinkingDataUpload /> },
+    { path: "/edit-report", element: <EditReport /> },
     // Add more routes as needed
   ]);
 
