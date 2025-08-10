@@ -1,4 +1,16 @@
-# Getting Started with Create React App
+# Project Description
+
+This repository contains the frontend interface for the Q-MES (Manufacturing Execution System) Reporting Module. It provides users with an intuitive platform to view and manage production reports, working in conjunction with the backend service.
+
+The application is divided into two main sections:
+
+Reporting Section – Displays a collection of report links integrated with SQL Server Reporting Services (SSRS). When a user selects a link, they are redirected to the SSRS interface to view the corresponding report in real time.
+
+Report Editing Section – An admin-only area accessible via secure login. This section allows authorized personnel to manage reports for specific dates, including editing, deleting, and re-pulling report data from the backend as required.
+
+This system ensures that end-users can quickly access reports, while administrators have the necessary tools to correct data issues and keep the reporting module accurate and up to date.
+
+## How to start the server
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
@@ -39,32 +51,7 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
 ### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
 ### `npm run build` fails to minify
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
